@@ -104,3 +104,10 @@ VM - **VPN**
 <img src="https://imgur.com/BuDgmQh.png" alt="vpn diagram"/>
 
 ---
+
+## Conclusion
+Congragulations on successfully completing the vpn-setup lab!
+
+- VPNs can securely link two computers or networks across the internet.
+- This allows the two networks to send encapsulated and encrypted data to eachother.
+- You will likely use a VPN to connect to resources at work from your home.
