@@ -12,31 +12,30 @@ This tutorial walks you through setting up a virtual machine in Microsoft Azure,
 
 1. **Access Your Public IP Address**
    - On your own machine, browse to [WhatIsMyIPAddress](https://whatismyipaddress.com/).
-   - Take note of your public IP address and save it in a text file for reference.
+   - Take note of your public IP address and save it for reference.
+<img src="https://imgur.com/Hkv4zDC.png" alt="vpn diagram"/>
 
 2. **Create a Resource Group**
    - Log into your Azure Portal: [Azure Portal](https://portal.azure.com/).
    - Navigate to **Resource Groups** and click **Create**.
    - Provide the following:
-     - **Resource Group Name**: `MyAzureVPNLab`
-     - **Region**: Select a region near you.
+     - **Resource Group Name**: `vpn-test`
+     - **Region**: Select your region of choice.
    - Click **Review + Create**, then **Create**.
 
 3. **Create a Virtual Machine**
    - Navigate to **Virtual Machines** in the Azure Portal and click **Create**.
    - Select **Azure Virtual Machine**.
    - Fill out the following:
-     - **Name**: `MyWindowsVM`
-     - **Region**: Choose a region close to your geographic location or country from your current location.
+     - **Name**: `vpn-test-win-10`
+     - **Region**: Choose previously selected region from step 2.
      - **Image**: Windows 10 22H2.
      - **Size**: Select a size that has at least 2vcpus, and 8GiB memory.
      - **Administrator Username and Password**: Set your credentials.
    - Acknowledge licensing agreement & ensure **Inbound Port Rules** to allow RDP (Remote Desktop Protocol).
    - Click **Review + Create**, then **Create**.
 
-![image](https://github.com/user-attachments/assets/2dc277e6-909b-4d17-ae3b-fee309647c98)
-
-![image](https://github.com/user-attachments/assets/2379a5c4-48ff-4285-a7f6-97522cf6532b)
+<img src="https://imgur.com/Rdml4vh.png" alt="vpn diagram"/>
 
 4. **Log into the Virtual Machine**
    - After the VM is created, navigate to it in the Azure Portal.
@@ -46,12 +45,14 @@ This tutorial walks you through setting up a virtual machine in Microsoft Azure,
      - **Username and Password**: Use the credentials you created earlier.
    - Once connected, open a web browser on the VM.
 
-![image](https://github.com/user-attachments/assets/424f1f43-73cb-410a-9d58-c19880a82b44)
+<img src="https://imgur.com/J41tyz0.png" alt="vpn diagram"/>
+<img src="https://imgur.com/KRfxLKo.png" alt="vpn diagram"/>
+<img src="https://imgur.com/PvguEHI.png" alt="vpn diagram"/>
 
 5. **Check the VM's Public IP Address**
    - In the VM, browse to [WhatIsMyIPAddress](https://whatismyipaddress.com/).
-   - Take note of the VM's public IP address and save it in a text file.
-
+   - Take note of the VM's public IP address and save it for reference.
+<img src="https://imgur.com/75wY3dn.png" alt="vpn diagram"/>
 ---
 
 ## Part 2: Sign Up for ProtonVPN and Test the VPN Connection
@@ -63,39 +64,43 @@ This tutorial walks you through setting up a virtual machine in Microsoft Azure,
 2. **Download ProtonVPN Client**
    - In your VM, go to [ProtonVPN Download](https://protonvpn.com/download/).
    - Download and install the ProtonVPN client.
+<img src="https://imgur.com/r5XVjrL.png" alt="vpn diagram"/>
+<img src="https://imgur.com/9K5Rjho.png" alt="vpn diagram"/>
 
 3. **Log Into ProtonVPN**
    - Open the ProtonVPN client in the VM.
-   - Log in using your ProtonVPN account credentials: [ProtonVPN Login](https://account.protonvpn.com/login).
+   - Log in using your ProtonVPN account credentials: [ProtonVPN Login](https://account.protonvpn.com/login)
+<img src="https://imgur.com/YKwzp9Z.png" alt="vpn diagram"/>
 
 4. **Connect to a VPN Server**
    - In the ProtonVPN client, choose a VPN server in a area different from your actual computer's location (Proton VPN requires payment to change countries).
    - Connect to the VPN server.
 
-![image](https://github.com/user-attachments/assets/8e65d4af-33c7-499c-a5ec-8b6712993e94)
+<img src="https://imgur.com/SPROTJt.png" alt="vpn diagram"/>
 
 5. **Check the VPN's Public IP Address**
    - In the VM, browse to [WhatIsMyIPAddress](https://whatismyipaddress.com/).
-   - Take note of the new IP address and save it in a text file.
+   - Take note of the new IP address and save it for reference.
+<img src="https://imgur.com/BuDgmQh.png" alt="vpn diagram"/>
+   
 
 ---
 
 ## Notes and Observations
 
-- Save all IP addresses and observations in a text file for documentation purposes.
 - Compare the behavior of websites and the changes in IP addresses to understand the effects of geographic location and VPN usage.
 - From this lab, here are my documented IP addresses & their changes:
 
 Personal Computer
 
-![image](https://github.com/user-attachments/assets/8d0762e5-7338-4e66-a909-3b5f439a4d41)
+<img src="https://imgur.com/Hkv4zDC.png" alt="vpn diagram"/>
 
 VM - **Non-VPN**
 
-![image](https://github.com/user-attachments/assets/611b3452-c59e-4d97-94e8-6ef5a2b562c4)
+<img src="https://imgur.com/75wY3dn.png" alt="vpn diagram"/>
 
 VM - **VPN** 
 
-![image](https://github.com/user-attachments/assets/3ffb46ca-c96a-4e75-9bb1-90e98fa5d476)
+<img src="https://imgur.com/BuDgmQh.png" alt="vpn diagram"/>
 
 ---
